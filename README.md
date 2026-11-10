@@ -4,6 +4,8 @@ Projeto em oito etapas. As Etapas 01–03 estabeleceram a base visual, header, h
 
 A Etapa 07 refinou foco por teclado, navegação mobile, contraste, responsividade e microinterações com suporte a movimento reduzido.
 
+A Etapa 08 adicionou metadados sociais, dados estruturados, favicon, sitemap e robots. O conteúdo principal continua renderizado no servidor.
+
 ```bash
 npm install
 npm run dev
@@ -20,3 +22,9 @@ Para associar mídia, coloque o arquivo em `public/projects/` e configure `media
 ## Contato
 
 Os destinos públicos ficam em `src/content/contact.ts`. O e-mail abre `mailto:`. O WhatsApp usa `https://wa.me/` seguido de DDI, DDD e número, somente quando um número autorizado e válido for configurado. Links profissionais adicionais também dependem de confirmação. O GitHub usa a URL de `src/content/site.ts`; canais sem dados não são exibidos.
+
+## Publicação e SEO
+
+Defina `SITE_URL` como a origem HTTPS definitiva **antes do build de publicação** (sem caminho, query ou fragmento). Exemplo de formato: `SITE_URL=https://<domínio-aprovado> npm run build`. Sem essa variável, a prévia recebe `noindex`, o `robots.txt` bloqueia indexação e o sitemap fica vazio; canonical e URL pública no JSON-LD permanecem ausentes. Com uma origem válida, canonical, Open Graph, sitemap e robots usam o mesmo endereço. Valores inválidos interrompem o build.
+
+Título e descrição públicos ficam em `src/content/seo.ts`. A imagem de compartilhamento usa a geometria do próprio portfólio e é gerada em `/social-image`; a URL da imagem só aparece nos metadados com `SITE_URL` configurada. Não há domínio definitivo configurado no repositório.

@@ -59,3 +59,9 @@ Contato fecha a sequência da página com uma chamada tipográfica grande e um p
 O foco de links e botões recebe contorno de 3 px; o menu mobile preserva a ordem natural do Tab, Escape devolve foco ao botão e a seleção de uma seção move o foco para o destino após fechar o menu. A indicação fixa e incorreta de “Início” como página atual foi removida. Os links de navegação ganham linha âmbar em hover/foco; menu, CTAs e cards usam transformações curtas de 80–180 ms apenas como feedback. Movimento reduzido elimina essas transformações/transições, sem esconder informação.
 
 O acento para texto no tema claro foi escurecido em `src/app/globals.css` para `#8B5700`, obtendo contraste calculado de 5,39:1 sobre a superfície elevada mais clara (`#EDF2F8`). O footer reserva uma faixa à esquerda para o botão fixo de tema até 900 px, e os contatos passam a uma coluna em telas estreitas. Descrições externas de projetos aceitam quebra de palavras longas. O relatório dos tokens gerados permanece como registro da paleta inicial; a substituição acima representa a paleta aplicada.
+
+## Finalização na Etapa 08
+
+O HTML inicial contém a apresentação e a galeria renderizadas no servidor. A tipografia usa `next/font` com `display: swap`; os cards reservam proporção para mídia local opcional por `next/image`, enquanto a hero gráfica em CSS evita baixar uma imagem grande acima da dobra. A página tem título, descrição, Open Graph, Twitter summary card, ícone orbital e JSON-LD `Person` com apenas nome e GitHub confirmados.
+
+Canonical, indexação, sitemap e URL pública dos metadados dependem de `SITE_URL` HTTPS configurada antes do build de publicação. Sem domínio, a prévia permanece fora do índice e não anuncia uma URL fictícia. O cartão social de 1200×630 px reutiliza tipografia e órbitas em vez de fotografia; a rota é estática e sua URL só é anunciada nos metadados após configuração do domínio.
