@@ -2,6 +2,7 @@
 @import "../../design/generated/theme.css";
 @import "./sections.css";
 @import "./projects.css";
+@import "./contact.css";
 
 @theme inline {
   --color-background: var(--background);

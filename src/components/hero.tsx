@@ -20,10 +20,7 @@ export function Hero() {
             <a className="hero__button hero__button--primary" href="#projetos">
               Ver projetos <span aria-hidden="true">↗</span>
             </a>
-            <a
-              className="hero__button hero__button--secondary"
-              href={site.contactHref}
-            >
+            <a className="hero__button hero__button--secondary" href="#contato">
               Entrar em contato <span aria-hidden="true">↗</span>
             </a>
           </div>

@@ -89,14 +89,14 @@ export function SiteHeader() {
           </a>
           <a
             className="site-nav__link"
-            href={site.contactHref}
+            href="#contato"
             onClick={() => setMenuOpen(false)}
           >
             Contato
           </a>
         </nav>
 
-        <a className="site-header__action" href={site.contactHref}>
+        <a className="site-header__action" href="#contato">
           Vamos conversar <span aria-hidden="true">↗</span>
         </a>
       </Container>

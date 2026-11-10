@@ -11,5 +11,4 @@ export const site = {
   introduction:
     "Estudo programação de forma autônoma e reúno aqui os projetos que desenvolvo, os desafios que encontro e o que aprendo ao resolvê-los.",
   githubUrl: "https://github.com/ribeiro-luckas",
-  contactHref: "mailto:luckas.ribeiro04@gmail.com",
 } as const;

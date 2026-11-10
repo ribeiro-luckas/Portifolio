@@ -49,3 +49,7 @@ O botão de 48 px fica no canto inferior esquerdo, tem nome acessível para a pr
 Os cards de projetos mantêm a superfície de 20 px de raio, borda discreta, composição orbital em CSS quando não há mídia e ações com área de toque de pelo menos 44 px. O grid usa uma coluna no mobile e duas quando há largura. A imagem local opcional ocupa proporção 16:9; GIFs permanecem sem otimização para preservar a animação. Hover altera apenas borda e transformação, com redução de movimento respeitada.
 
 A seleção e os conteúdos complementares ficam em `src/content/projects.ts`. A página obtém os repositórios públicos no servidor, com revalidação a cada hora. Descrição e linguagem principal vêm do GitHub quando presentes; nenhuma demonstração, mídia ou tecnologia adicional foi atribuída sem fonte. Se a API falhar, os cards configurados permanecem com nomes e links estáveis, enquanto a descrição usa texto genérico explícito.
+
+## Aplicação na Etapa 06
+
+Contato fecha a sequência da página com uma chamada tipográfica grande e um painel de canais diretos, mantendo os mesmos tokens, bordas e sinal orbital. E-mail e GitHub usam destinos já confirmados. WhatsApp via `wa.me` e redes profissionais ficam condicionados a dados públicos autorizados, centralizados em `src/content/contact.ts`; canais sem destino válido não são renderizados. Header e hero apontam para `#contato`, enquanto o CTA da seção abre o cliente de e-mail. O footer oferece identidade, navegação por âncoras e ano corrente, com espaço inferior no mobile para o botão flutuante de tema.
