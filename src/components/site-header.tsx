@@ -68,6 +68,20 @@ export function SiteHeader() {
           </a>
           <a
             className="site-nav__link"
+            href="#sobre"
+            onClick={() => setMenuOpen(false)}
+          >
+            Sobre mim
+          </a>
+          <a
+            className="site-nav__link"
+            href="#tecnologias"
+            onClick={() => setMenuOpen(false)}
+          >
+            Tecnologias
+          </a>
+          <a
+            className="site-nav__link"
             href={site.githubUrl}
             target="_blank"
             rel="noopener noreferrer"

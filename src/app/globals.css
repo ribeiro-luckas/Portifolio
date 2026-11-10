@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "../../design/generated/theme.css";
+@import "./sections.css";
 
 @theme inline {
   --color-background: var(--background);
@@ -569,6 +570,8 @@ body {
     background: var(--surface);
     box-shadow: 0 20px 40px
       color-mix(in srgb, var(--background) 55%, transparent);
+    max-height: calc(100dvh - 72px);
+    overflow-y: auto;
   }
 
   .site-nav[data-open="false"] {

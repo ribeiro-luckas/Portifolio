@@ -1,5 +1,7 @@
 import { Hero } from "@/components/hero";
+import { AboutSection } from "@/components/about-section";
 import { SiteHeader } from "@/components/site-header";
+import { TechnologiesSection } from "@/components/technologies-section";
 
 export default function Home() {
   return (
@@ -10,6 +12,8 @@ export default function Home() {
       <SiteHeader />
       <main id="conteudo" tabIndex={-1}>
         <Hero />
+        <AboutSection />
+        <TechnologiesSection />
       </main>
     </>
   );

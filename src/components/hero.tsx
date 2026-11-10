@@ -13,8 +13,7 @@ export function Hero() {
           <p className="hero__introduction-name">Olá, eu sou {site.name}.</p>
           <h1 id="hero-title">
             {site.headline.first}
-            <br />
-            {site.headline.second} <span>{site.headline.accent}</span>
+            <br /> {site.headline.second} <span>{site.headline.accent}</span>
           </h1>
           <p className="hero__description">{site.introduction}</p>
           <div className="hero__actions">

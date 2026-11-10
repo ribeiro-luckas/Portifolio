@@ -1,10 +1,10 @@
 # Portfólio profissional
 
-Projeto em oito etapas. A Etapa 01 estabeleceu Next.js, Tailwind, TypeScript, Prettier e os tokens visuais. A Etapa 02 implementou header responsivo e hero. A Etapa 03 adicionou escolha de tema pelo sistema ou pelo botão flutuante, com preferência manual persistida; as outras seções entram nas etapas seguintes.
+Projeto em oito etapas. As Etapas 01–03 estabeleceram a base visual, header, hero e temas. A Etapa 04 adicionou “Sobre mim” e “Tecnologias”, com conteúdo editável e confirmado pelo autor. Projetos e contato completo entram nas etapas seguintes.
 
 ```bash
 npm install
 npm run dev
 ```
 
-Direção visual e decisões: [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md). O texto e os destinos públicos atuais ficam em `src/content/site.ts`. O domínio definitivo e o restante do conteúdo profissional serão definidos antes da publicação.
+Direção visual e decisões: [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md). Nome, destinos e textos da hero ficam em `src/content/site.ts`; trajetória e tecnologias ficam em `src/content/profile.ts` e `src/content/technologies.ts`. O domínio definitivo e o restante do conteúdo profissional serão definidos antes da publicação.

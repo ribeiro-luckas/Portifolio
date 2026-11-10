@@ -1,4 +1,4 @@
-# Design System · Etapa 01
+# Design System · Portfólio
 
 ## Referência e direção
 
@@ -39,3 +39,7 @@ O conteúdo público está centralizado em `src/content/site.ts`: nome “Luckas
 O tema inicial segue `prefers-color-scheme`; uma preferência manual válida (`light` ou `dark`) em `localStorage` tem prioridade e persiste entre visitas. Sem preferência salva, mudanças do sistema atualizam a página. O script de inicialização fica no `<head>` antes do corpo para aplicar `data-theme` antes da primeira pintura; o botão cliente mantém marcação inicial estável para evitar divergência de hidratação. O modo escuro e o claro compartilham os papéis semânticos de `design/generated/theme.css`; o fallback CSS para o sistema permanece em `src/app/globals.css` caso o script não execute.
 
 O botão de 48 px fica no canto inferior esquerdo, tem nome acessível para a próxima ação e anima apenas opacidade e transformação dos ícones. `prefers-reduced-motion` remove essas transições. Em larguras até 360 px, o espaçamento da hero foi ajustado para não cobrir o CTA de contato. Uma política de CSP futura deverá permitir o script estático de inicialização por hash ou nonce, sem afrouxar a política global.
+
+## Aplicação na Etapa 04
+
+“Sobre mim” usa um bloco editorial e uma lista de três pontos da trajetória, todos baseados em fatos confirmados: estudo autônomo, projetos próprios e curso Start em andamento. “Tecnologias” usa grupos com chips estáticos, sem níveis de proficiência ou ícones de marcas. As duas seções seguem os tokens semânticos nos temas claro e escuro, com uma coluna no mobile; os grupos técnicos passam a duas colunas quando há espaço. O conteúdo editável fica em `src/content/profile.ts` e `src/content/technologies.ts`. As categorias ferramentas e outras habilidades estão previstas no tipo de dados, mas permanecem sem itens e não são exibidas até confirmação do usuário.
