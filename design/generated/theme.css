@@ -1,0 +1,115 @@
+/* Tokens de PROJETO gerados por política do kit; não copiados da referência. */
+:root {
+  color-scheme: light;
+  --font-heading: "Space Grotesk", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --content-max: 1200px;
+  --radius-control: 12px;
+  --radius-card: 20px;
+  --motion-fast: 250ms;
+  --motion-close: 150ms;
+  --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+  --background: #f8fafc;
+  --surface: #ffffff;
+  --surface-raised: #edf2f8;
+  --text: #111827;
+  --text-muted: #334155;
+  --border: #64748b;
+  --accent: #ea970c;
+  --on-accent: #0a0a0a;
+  --accent-ink: #a06707;
+  --focus: #111827;
+  --destructive: #b42318;
+  --on-destructive: #ffffff;
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --background: #0d101b;
+  --surface: #161b2a;
+  --surface-raised: #22283a;
+  --text: #f8fafc;
+  --text-muted: #c4ccda;
+  --border: #64718a;
+  --accent: #f4ab30;
+  --on-accent: #0a0a0a;
+  --accent-ink: #f59e0b;
+  --focus: #f4ab30;
+  --destructive: #f87171;
+  --on-destructive: #0a0a0a;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font: 400 1rem/1.55 var(--font-body);
+}
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+}
+h1 {
+  font-size: clamp(2.25rem, 1.4rem + 3.2vw, 4.75rem);
+  line-height: 1.05;
+}
+h2 {
+  font-size: clamp(1.8rem, 1.35rem + 1.7vw, 3rem);
+}
+.container {
+  width: min(calc(100% - 2 * clamp(16px, 4vw, 48px)), var(--content-max));
+  margin-inline: auto;
+}
+.section {
+  padding-block: clamp(64px, 9vw, 112px);
+}
+.card {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+}
+.button-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 12px 20px;
+  border: 0;
+  border-radius: var(--radius-control);
+  background: var(--accent);
+  color: var(--on-accent);
+  font: inherit;
+  cursor: pointer;
+}
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+.button-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.hero-gradient {
+  background-color: var(--background);
+  background-image: radial-gradient(
+    ellipse at 80% 22%,
+    color-mix(in srgb, var(--accent) 18%, transparent) 0%,
+    transparent 56%
+  );
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

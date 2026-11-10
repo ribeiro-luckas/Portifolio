@@ -1,0 +1,17 @@
+{
+  "project_id": "portfolio-profissional",
+  "project_name": "Portfólio profissional de Luckas Ribeiro",
+  "industry": "portfolio",
+  "goal": "explore",
+  "audience": "Pessoas que desejam conhecer projetos e competências; hipótese de projeto, sem pesquisa de público",
+  "tone": "preciso-moderno",
+  "primary_seed_hex": "#F59E0B",
+  "color_mode": "both",
+  "pages": ["home"],
+  "motion_level": "subtle",
+  "hero_media": "none",
+  "business_claims_verified": false,
+  "brand_assets_licensed": false,
+  "approved_for_publication": false,
+  "notes": "Referência local analisada em 2026-11-10. Não copiar fotografia, nome, logo, métricas ou textos da imagem. Dados profissionais e domínio ficam pendentes."
+}

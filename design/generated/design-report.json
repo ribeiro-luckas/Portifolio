@@ -1,0 +1,68 @@
+{
+  "generator": "Design Intelligence Kit v1",
+  "generated_at_utc": "2026-11-10T06:55:47.102646+00:00",
+  "project_id": "portfolio-profissional",
+  "preset_classification": "proposed_for_kit",
+  "seed": "#F59E0B",
+  "seed_source_evidence_if_default": "E27",
+  "colors": {
+    "light": {
+      "background": "#F8FAFC",
+      "surface": "#FFFFFF",
+      "surface_raised": "#EDF2F8",
+      "text": "#111827",
+      "text_muted": "#334155",
+      "border": "#64748B",
+      "accent": "#EA970C",
+      "on_accent": "#0A0A0A",
+      "accent_ink": "#A06707",
+      "focus": "#111827",
+      "destructive": "#B42318",
+      "on_destructive": "#FFFFFF"
+    },
+    "dark": {
+      "background": "#0D101B",
+      "surface": "#161B2A",
+      "surface_raised": "#22283A",
+      "text": "#F8FAFC",
+      "text_muted": "#C4CCDA",
+      "border": "#64718A",
+      "accent": "#F4AB30",
+      "on_accent": "#0A0A0A",
+      "accent_ink": "#F59E0B",
+      "focus": "#F4AB30",
+      "destructive": "#F87171",
+      "on_destructive": "#0A0A0A"
+    }
+  },
+  "solid_pair_wcag_contrast": {
+    "light": {
+      "text_background": 16.955,
+      "text_surface": 17.74,
+      "muted_background": 9.897,
+      "accent_label": 8.419,
+      "accent_ink_background": 4.523,
+      "focus_background": 16.955,
+      "border_background": 4.548,
+      "border_surface": 4.759
+    },
+    "dark": {
+      "text_background": 18.13,
+      "text_surface": 16.394,
+      "muted_background": 11.74,
+      "accent_label": 10.101,
+      "accent_ink_background": 8.833,
+      "focus_background": 9.678,
+      "border_background": 3.858,
+      "border_surface": 3.488
+    }
+  },
+  "warnings": [
+    "PUBLICATION_BLOCK: business_claims_verified=false; não afirmar resultados/depoimentos/benefícios sem provas.",
+    "PUBLICATION_BLOCK: brand_assets_licensed=false; só assets próprios/sem restrição verificada.",
+    "PUBLICATION_BLOCK: approved_for_publication=false."
+  ],
+  "passed_basic_color_checks": true,
+  "runtime_validation_performed": false,
+  "published_ready": false
+}
