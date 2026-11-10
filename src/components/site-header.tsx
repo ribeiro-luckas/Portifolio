@@ -82,12 +82,10 @@ export function SiteHeader() {
           </a>
           <a
             className="site-nav__link"
-            href={site.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#projetos"
             onClick={() => setMenuOpen(false)}
           >
-            Projetos <span className="sr-only">(abre em nova aba)</span>
+            Projetos
           </a>
           <a
             className="site-nav__link"

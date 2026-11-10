@@ -2,8 +2,12 @@ import { Hero } from "@/components/hero";
 import { AboutSection } from "@/components/about-section";
 import { SiteHeader } from "@/components/site-header";
 import { TechnologiesSection } from "@/components/technologies-section";
+import { ProjectsSection } from "@/components/projects-section";
+import { getSelectedProjects } from "@/lib/github";
 
-export default function Home() {
+export default async function Home() {
+  const projects = await getSelectedProjects();
+
   return (
     <>
       <a className="skip-link" href="#conteudo">
@@ -14,6 +18,7 @@ export default function Home() {
         <Hero />
         <AboutSection />
         <TechnologiesSection />
+        <ProjectsSection projects={projects} />
       </main>
     </>
   );

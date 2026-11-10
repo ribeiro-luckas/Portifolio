@@ -17,14 +17,8 @@ export function Hero() {
           </h1>
           <p className="hero__description">{site.introduction}</p>
           <div className="hero__actions">
-            <a
-              className="hero__button hero__button--primary"
-              href={site.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a className="hero__button hero__button--primary" href="#projetos">
               Ver projetos <span aria-hidden="true">↗</span>
-              <span className="sr-only">(abre em nova aba)</span>
             </a>
             <a
               className="hero__button hero__button--secondary"

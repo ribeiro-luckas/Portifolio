@@ -43,3 +43,9 @@ O botão de 48 px fica no canto inferior esquerdo, tem nome acessível para a pr
 ## Aplicação na Etapa 04
 
 “Sobre mim” usa um bloco editorial e uma lista de três pontos da trajetória, todos baseados em fatos confirmados: estudo autônomo, projetos próprios e curso Start em andamento. “Tecnologias” usa grupos com chips estáticos, sem níveis de proficiência ou ícones de marcas. As duas seções seguem os tokens semânticos nos temas claro e escuro, com uma coluna no mobile; os grupos técnicos passam a duas colunas quando há espaço. O conteúdo editável fica em `src/content/profile.ts` e `src/content/technologies.ts`. As categorias ferramentas e outras habilidades estão previstas no tipo de dados, mas permanecem sem itens e não são exibidas até confirmação do usuário.
+
+## Aplicação na Etapa 05
+
+Os cards de projetos mantêm a superfície de 20 px de raio, borda discreta, composição orbital em CSS quando não há mídia e ações com área de toque de pelo menos 44 px. O grid usa uma coluna no mobile e duas quando há largura. A imagem local opcional ocupa proporção 16:9; GIFs permanecem sem otimização para preservar a animação. Hover altera apenas borda e transformação, com redução de movimento respeitada.
+
+A seleção e os conteúdos complementares ficam em `src/content/projects.ts`. A página obtém os repositórios públicos no servidor, com revalidação a cada hora. Descrição e linguagem principal vêm do GitHub quando presentes; nenhuma demonstração, mídia ou tecnologia adicional foi atribuída sem fonte. Se a API falhar, os cards configurados permanecem com nomes e links estáveis, enquanto a descrição usa texto genérico explícito.
