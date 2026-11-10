@@ -8,6 +8,7 @@ export function ContactSection() {
       id="contato"
       className="contact-section"
       aria-labelledby="contact-title"
+      tabIndex={-1}
     >
       <Container className="contact-section__inner">
         <div className="contact-section__intro">

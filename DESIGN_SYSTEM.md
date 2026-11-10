@@ -17,7 +17,7 @@ Os tokens gerados em `design/generated/design.tokens.json` e `theme.css` são a 
 | Texto             | `#111827` | `#F8FAFC` |
 | Texto secundário  | `#334155` | `#C4CCDA` |
 | Acento            | `#EA970C` | `#F4AB30` |
-| Acento para texto | `#A06707` | `#F59E0B` |
+| Acento para texto | `#8B5700` | `#F59E0B` |
 
 - **Tipografia:** Space Grotesk 700 para display e Inter 400–600 para corpo/interface; rótulos curtos em caixa alta com espaçamento amplo. Escala fluida e largura de leitura contida.
 - **Espaçamento:** base de 4 px; passos principais 8, 12, 16, 24, 32, 48, 64 e 96 px. Container até 1200 px com margens fluidas.
@@ -53,3 +53,9 @@ A seleção e os conteúdos complementares ficam em `src/content/projects.ts`. A
 ## Aplicação na Etapa 06
 
 Contato fecha a sequência da página com uma chamada tipográfica grande e um painel de canais diretos, mantendo os mesmos tokens, bordas e sinal orbital. E-mail e GitHub usam destinos já confirmados. WhatsApp via `wa.me` e redes profissionais ficam condicionados a dados públicos autorizados, centralizados em `src/content/contact.ts`; canais sem destino válido não são renderizados. Header e hero apontam para `#contato`, enquanto o CTA da seção abre o cliente de e-mail. O footer oferece identidade, navegação por âncoras e ano corrente, com espaço inferior no mobile para o botão flutuante de tema.
+
+## Refinamento na Etapa 07
+
+O foco de links e botões recebe contorno de 3 px; o menu mobile preserva a ordem natural do Tab, Escape devolve foco ao botão e a seleção de uma seção move o foco para o destino após fechar o menu. A indicação fixa e incorreta de “Início” como página atual foi removida. Os links de navegação ganham linha âmbar em hover/foco; menu, CTAs e cards usam transformações curtas de 80–180 ms apenas como feedback. Movimento reduzido elimina essas transformações/transições, sem esconder informação.
+
+O acento para texto no tema claro foi escurecido em `src/app/globals.css` para `#8B5700`, obtendo contraste calculado de 5,39:1 sobre a superfície elevada mais clara (`#EDF2F8`). O footer reserva uma faixa à esquerda para o botão fixo de tema até 900 px, e os contatos passam a uma coluna em telas estreitas. Descrições externas de projetos aceitam quebra de palavras longas. O relatório dos tokens gerados permanece como registro da paleta inicial; a substituição acima representa a paleta aplicada.

@@ -30,7 +30,8 @@
   border-color: var(--accent-ink);
 }
 
-.projects-section__card:hover {
+.projects-section__card:hover,
+.projects-section__card:focus-within {
   transform: translateY(-3px);
 }
 
@@ -119,6 +120,7 @@
   color: var(--text-muted);
   font-size: 0.96rem;
   line-height: 1.6;
+  overflow-wrap: anywhere;
 }
 
 .projects-section__technologies {
@@ -210,6 +212,13 @@
     transition: none;
   }
 
+  .projects-section__card:hover,
+  .projects-section__card:focus-within {
+    transform: none;
+  }
+}
+
+@media (hover: none) {
   .projects-section__card:hover {
     transform: none;
   }

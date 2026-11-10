@@ -71,6 +71,7 @@ export function ProjectsSection({
       id="projetos"
       className="projects-section"
       aria-labelledby="projects-title"
+      tabIndex={-1}
     >
       <Container>
         <SectionHeading

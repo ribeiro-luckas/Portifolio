@@ -8,6 +8,7 @@ export function TechnologiesSection() {
       id="tecnologias"
       className="technologies-section"
       aria-labelledby="technologies-title"
+      tabIndex={-1}
     >
       <Container>
         <SectionHeading

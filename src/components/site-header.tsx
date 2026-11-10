@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type MouseEvent } from "react";
 import { Container } from "@/components/ui/container";
 import { site } from "@/content/site";
 
@@ -19,6 +19,14 @@ export function SiteHeader() {
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [menuOpen]);
+
+  function navigateToSection(event: MouseEvent<HTMLAnchorElement>) {
+    const sectionId = event.currentTarget.hash.slice(1);
+    setMenuOpen(false);
+    requestAnimationFrame(() => {
+      document.getElementById(sectionId)?.focus({ preventScroll: true });
+    });
+  }
 
   return (
     <header className="site-header">
@@ -61,36 +69,35 @@ export function SiteHeader() {
           <a
             className="site-nav__link"
             href="#inicio"
-            onClick={() => setMenuOpen(false)}
-            aria-current="page"
+            onClick={navigateToSection}
           >
             Início
           </a>
           <a
             className="site-nav__link"
             href="#sobre"
-            onClick={() => setMenuOpen(false)}
+            onClick={navigateToSection}
           >
             Sobre mim
           </a>
           <a
             className="site-nav__link"
             href="#tecnologias"
-            onClick={() => setMenuOpen(false)}
+            onClick={navigateToSection}
           >
             Tecnologias
           </a>
           <a
             className="site-nav__link"
             href="#projetos"
-            onClick={() => setMenuOpen(false)}
+            onClick={navigateToSection}
           >
             Projetos
           </a>
           <a
             className="site-nav__link"
             href="#contato"
-            onClick={() => setMenuOpen(false)}
+            onClick={navigateToSection}
           >
             Contato
           </a>

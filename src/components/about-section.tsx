@@ -4,7 +4,12 @@ import { profile } from "@/content/profile";
 
 export function AboutSection() {
   return (
-    <section id="sobre" className="about-section" aria-labelledby="about-title">
+    <section
+      id="sobre"
+      className="about-section"
+      aria-labelledby="about-title"
+      tabIndex={-1}
+    >
       <Container className="about-section__inner">
         <div className="about-section__story">
           <SectionHeading

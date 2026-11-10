@@ -4,7 +4,12 @@ import { site } from "@/content/site";
 
 export function Hero() {
   return (
-    <section id="inicio" className="hero" aria-labelledby="hero-title">
+    <section
+      id="inicio"
+      className="hero"
+      aria-labelledby="hero-title"
+      tabIndex={-1}
+    >
       <Container className="hero__inner">
         <div className="hero__copy">
           <p className="hero__eyebrow">

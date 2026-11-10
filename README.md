@@ -2,6 +2,8 @@
 
 Projeto em oito etapas. As Etapas 01–03 estabeleceram a base visual, header, hero e temas. A Etapa 04 adicionou “Sobre mim” e “Tecnologias”, com conteúdo editável e confirmado pelo autor. A Etapa 05 adicionou a galeria de projetos públicos do GitHub. A Etapa 06 adicionou contato e footer.
 
+A Etapa 07 refinou foco por teclado, navegação mobile, contraste, responsividade e microinterações com suporte a movimento reduzido.
+
 ```bash
 npm install
 npm run dev
