@@ -27,3 +27,9 @@ Os tokens gerados em `design/generated/design.tokens.json` e `theme.css` são a 
 - **Acessibilidade:** pares de texto e fundo calculados no relatório do gerador; foco visível, sem informação apenas por cor, sem fotografia fictícia, contraste composto e overflow a verificar na interface real.
 
 **Estado:** fundação executável, ainda não publicável. Dados profissionais, contatos, domínio, conteúdos e validação visual completa seguem para etapas posteriores.
+
+## Aplicação na Etapa 02
+
+O header usa marca tipográfica, navegação semântica e CTA de contato. No mobile, o menu é uma divulgação acionada por botão; Escape o fecha e devolve foco. A hero usa grid assimétrico no desktop e coluna única em telas menores, com título de alto contraste, dois CTAs e desenho orbital em CSS. Não há estatísticas, badges de tecnologia ou fotografia, pois faltam dados/ativos para justificá-los. O desenho admite mídia pessoal fornecida futuramente.
+
+O conteúdo público está centralizado em `src/content/site.ts`: nome “Luckas Ribeiro”, área “Desenvolvimento de software” e e-mail de contato foram confirmados pelo usuário. Até a Etapa 05, “Projetos” leva ao GitHub público; a navegação por âncoras crescerá conforme as seções forem implementadas. Até a Etapa 03, a preferência inicial de tema continua controlada apenas por CSS do sistema, sem escolha manual persistida.
