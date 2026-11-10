@@ -58,6 +58,72 @@ body {
   transform: translateY(0);
 }
 
+.theme-toggle {
+  position: fixed;
+  z-index: 20;
+  bottom: max(16px, env(safe-area-inset-bottom));
+  left: max(16px, env(safe-area-inset-left));
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: 0 8px 26px color-mix(in srgb, var(--background) 65%, transparent);
+  color: var(--text);
+  cursor: pointer;
+  transition:
+    background 150ms ease,
+    border-color 150ms ease,
+    transform 150ms ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent-ink);
+  transform: translateY(-2px);
+}
+
+.theme-toggle__icon {
+  grid-area: 1 / 1;
+  width: 23px;
+  height: 23px;
+  transition:
+    opacity 180ms ease,
+    transform 220ms var(--ease-smooth);
+}
+
+.theme-toggle__icon--moon {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+}
+
+.theme-toggle__icon--sun {
+  opacity: 0;
+  transform: rotate(-45deg) scale(0.7);
+}
+
+:root[data-theme="dark"] .theme-toggle__icon--moon {
+  opacity: 0;
+  transform: rotate(45deg) scale(0.7);
+}
+
+:root[data-theme="dark"] .theme-toggle__icon--sun {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) .theme-toggle__icon--moon {
+    opacity: 0;
+  }
+
+  :root:not([data-theme]) .theme-toggle__icon--sun {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+  }
+}
+
 .site-header {
   position: relative;
   z-index: 10;
@@ -571,7 +637,31 @@ body {
   }
 }
 
+@media (max-width: 360px) {
+  .hero__inner {
+    padding-top: 24px;
+  }
+
+  .hero__eyebrow {
+    margin-bottom: 16px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero__description {
+    margin-top: 18px;
+  }
+
+  .hero__actions {
+    margin-top: 20px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .theme-toggle,
+  .theme-toggle__icon,
   .site-nav__link,
   .site-header__action,
   .hero__button {
@@ -579,7 +669,8 @@ body {
   }
 
   .site-header__action:hover,
-  .hero__button:hover {
+  .hero__button:hover,
+  .theme-toggle:hover {
     transform: none;
   }
 }

@@ -1,6 +1,6 @@
 # Portfólio profissional
 
-Projeto em oito etapas. A Etapa 01 estabeleceu Next.js, Tailwind, TypeScript, Prettier e os tokens visuais. A Etapa 02 implementou header responsivo e hero; as outras seções entram nas etapas seguintes.
+Projeto em oito etapas. A Etapa 01 estabeleceu Next.js, Tailwind, TypeScript, Prettier e os tokens visuais. A Etapa 02 implementou header responsivo e hero. A Etapa 03 adicionou escolha de tema pelo sistema ou pelo botão flutuante, com preferência manual persistida; as outras seções entram nas etapas seguintes.
 
 ```bash
 npm install

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
+import { ThemeToggle } from "@/components/theme-toggle";
+import { initialThemeScript } from "@/lib/theme";
 import "./globals.css";
 
 const bodyFont = Inter({
@@ -22,9 +24,13 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: initialThemeScript }} />
+      </head>
       <body className={`${bodyFont.variable} ${displayFont.variable}`}>
         {children}
+        <ThemeToggle />
       </body>
     </html>
   );
