@@ -1,5 +1,5 @@
 export const profile = {
-  eyebrow: "02 / SOBRE MIM",
+  eyebrow: "SOBRE MIM",
   title: "Uma trajetória construída",
   titleAccent: "na prática.",
   introduction:

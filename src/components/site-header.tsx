@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, type MouseEvent } from "react";
 import { Container } from "@/components/ui/container";
+import { ThemeLogo } from "@/components/theme-logo";
 import { site } from "@/content/site";
 
 export function SiteHeader() {
@@ -37,10 +38,7 @@ export function SiteHeader() {
           onClick={() => setMenuOpen(false)}
           aria-label={`${site.name}, início`}
         >
-          <span className="site-brand__symbol" aria-hidden="true">
-            {site.initials}
-            <span>.</span>
-          </span>
+          <ThemeLogo className="site-brand__symbol" eager />
           <span className="site-brand__divider" aria-hidden="true" />
           <span className="site-brand__name">{site.name}</span>
         </a>
@@ -67,35 +65,35 @@ export function SiteHeader() {
           aria-label="Navegação principal"
         >
           <a
-            className="site-nav__link"
+            className="site-nav__link animated-underline"
             href="#inicio"
             onClick={navigateToSection}
           >
             Início
           </a>
           <a
-            className="site-nav__link"
+            className="site-nav__link animated-underline"
             href="#sobre"
             onClick={navigateToSection}
           >
             Sobre mim
           </a>
           <a
-            className="site-nav__link"
+            className="site-nav__link animated-underline"
             href="#tecnologias"
             onClick={navigateToSection}
           >
             Tecnologias
           </a>
           <a
-            className="site-nav__link"
+            className="site-nav__link animated-underline"
             href="#projetos"
             onClick={navigateToSection}
           >
             Projetos
           </a>
           <a
-            className="site-nav__link"
+            className="site-nav__link animated-underline"
             href="#contato"
             onClick={navigateToSection}
           >

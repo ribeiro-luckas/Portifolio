@@ -1,9 +1,11 @@
 import { Container } from "@/components/ui/container";
+import { ThemeLogo } from "@/components/theme-logo";
 import { site } from "@/content/site";
 
 const footerLinks = [
   { label: "Início", href: "#inicio" },
   { label: "Sobre mim", href: "#sobre" },
+  { label: "Tecnologias", href: "#tecnologias" },
   { label: "Projetos", href: "#projetos" },
   { label: "Contato", href: "#contato" },
 ] as const;
@@ -17,8 +19,7 @@ export function SiteFooter() {
           href="#inicio"
           aria-label={`${site.name}, voltar ao início`}
         >
-          {site.initials}
-          <span>.</span>
+          <ThemeLogo />
         </a>
         <nav aria-label="Navegação do rodapé">
           {footerLinks.map((link) => (

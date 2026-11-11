@@ -1,23 +1,35 @@
+"use client";
+
+import { useEffect, useRef } from "react";
 import type { ReactNode } from "react";
-import { site } from "@/content/site";
+import { ThemeLogo } from "@/components/theme-logo";
 
 /** The optional media slot can host a personal photo after the user provides one. */
 export function HeroVisual({ media }: { media?: ReactNode }) {
+  const visual = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const target = visual.current;
+    if (!target || !window.IntersectionObserver) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        target.dataset.motionActive = String(entry.isIntersecting);
+      },
+      { threshold: 0.05 },
+    );
+    observer.observe(target);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="hero-visual" aria-hidden={media ? undefined : true}>
+    <div
+      ref={visual}
+      className="hero-visual"
+      data-motion-active="true"
+      aria-hidden={media ? undefined : true}
+    >
       <div className="hero-visual__frame">
-        <span
-          className="hero-visual__coordinate hero-visual__coordinate--top"
-          aria-hidden="true"
-        >
-          01 / PORTFÓLIO
-        </span>
-        <span
-          className="hero-visual__coordinate hero-visual__coordinate--bottom"
-          aria-hidden="true"
-        >
-          EXPLORAR · CRIAR
-        </span>
         <div className="hero-visual__orbit">
           <span
             className="hero-visual__orbit-ring hero-visual__orbit-ring--outer"
@@ -41,7 +53,7 @@ export function HeroVisual({ media }: { media?: ReactNode }) {
             aria-hidden="true"
           />
           <span className="hero-visual__orbit-core">
-            {media ?? <span>{site.initials}</span>}
+            {media ?? <ThemeLogo eager />}
           </span>
         </div>
       </div>

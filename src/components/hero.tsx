@@ -18,7 +18,13 @@ export function Hero() {
           <p className="hero__introduction-name">Olá, eu sou {site.name}.</p>
           <h1 id="hero-title">
             {site.headline.first}
-            <br /> {site.headline.second} <span>{site.headline.accent}</span>
+            <br /> {site.headline.second}{" "}
+            <span className="hero__typewriter">
+              <span className="hero__typewriter-text" aria-hidden="true">
+                {site.headline.accent}
+              </span>
+              <span className="sr-only">{site.headline.accent}</span>
+            </span>
           </h1>
           <p className="hero__description">{site.introduction}</p>
           <div className="hero__actions">

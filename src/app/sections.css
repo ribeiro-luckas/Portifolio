@@ -91,6 +91,29 @@
   border-bottom: 1px solid var(--border);
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  .about-section__path[data-reveal="pending"] .about-section__path-item {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  .about-section__path[data-reveal="visible"] .about-section__path-item {
+    transition:
+      opacity 400ms var(--ease-smooth),
+      transform 400ms var(--ease-smooth);
+  }
+
+  .about-section__path[data-reveal="visible"]
+    .about-section__path-item:nth-child(2) {
+    transition-delay: 80ms;
+  }
+
+  .about-section__path[data-reveal="visible"]
+    .about-section__path-item:nth-child(3) {
+    transition-delay: 160ms;
+  }
+}
+
 .about-section__path-number {
   padding-top: 4px;
   color: var(--accent-ink);
@@ -114,13 +137,7 @@
 }
 
 .technologies-section {
-  background:
-    radial-gradient(
-      circle at 100% 0%,
-      color-mix(in srgb, var(--accent) 5%, transparent),
-      transparent 36%
-    ),
-    var(--background);
+  background: var(--background);
 }
 
 .technologies-section .section-heading h2 {
@@ -162,7 +179,8 @@
   list-style: none;
 }
 
-.technologies-section__items li {
+.technology-badge {
+  --technology-ink: var(--technology-light-ink, var(--accent-ink));
   max-width: 100%;
   padding: 8px 13px;
   border: 1px solid color-mix(in srgb, var(--border) 42%, transparent);
@@ -173,6 +191,45 @@
   font-weight: 600;
   line-height: 1.4;
   overflow-wrap: anywhere;
+  cursor: pointer;
+  transition:
+    color 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms var(--ease-smooth);
+}
+
+:root[data-theme="dark"] .technology-badge {
+  --technology-ink: var(--technology-dark-ink, var(--accent-ink));
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) .technology-badge {
+    --technology-ink: var(--technology-dark-ink, var(--accent-ink));
+  }
+}
+
+.technologies-section__items .technology-badge:hover {
+  border-color: var(--technology-ink);
+  background: color-mix(
+    in srgb,
+    var(--technology-ink) 12%,
+    var(--surface-raised)
+  );
+  box-shadow: 0 5px 16px
+    color-mix(in srgb, var(--technology-ink) 10%, transparent);
+  color: var(--technology-ink);
+  transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .technology-badge {
+    transition: none;
+  }
+  .technologies-section__items .technology-badge:hover {
+    transform: none;
+  }
 }
 
 @media (max-width: 900px) {

@@ -1,6 +1,7 @@
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { technologyGroups } from "@/content/technologies";
+import { technologyBadgeStyle } from "@/content/technology-colors";
 
 export function TechnologiesSection() {
   return (
@@ -13,7 +14,7 @@ export function TechnologiesSection() {
       <Container>
         <SectionHeading
           id="technologies-title"
-          eyebrow="03 / TECNOLOGIAS"
+          eyebrow="TECNOLOGIAS"
           title="Ferramentas para"
           accent="colocar ideias em prática."
           description="Tecnologias que fazem parte dos meus estudos e projetos. A lista pode evoluir junto com o trabalho."
@@ -27,7 +28,13 @@ export function TechnologiesSection() {
                 aria-label={group.title}
               >
                 {group.items.map((item) => (
-                  <li key={item}>{item}</li>
+                  <li
+                    className="technology-badge"
+                    key={item}
+                    style={technologyBadgeStyle(item)}
+                  >
+                    {item}
+                  </li>
                 ))}
               </ul>
             </li>

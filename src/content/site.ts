@@ -4,9 +4,9 @@ export const site = {
   initials: "LR",
   area: "Desenvolvimento de software",
   headline: {
-    first: "Aprender, construir",
-    second: "e compartilhar",
-    accent: "software.",
+    first: "Analise, projeção",
+    second: "e criação de",
+    accent: "soluções.",
   },
   introduction:
     "Estudo programação de forma autônoma e reúno aqui os projetos que desenvolvo, os desafios que encontro e o que aprendo ao resolvê-los.",

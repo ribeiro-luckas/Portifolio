@@ -1,6 +1,7 @@
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { profile } from "@/content/profile";
+import { RevealOnView } from "@/components/ui/reveal-on-view";
 
 export function AboutSection() {
   return (
@@ -23,7 +24,11 @@ export function AboutSection() {
             <p>{profile.continuation}</p>
           </div>
         </div>
-        <ol className="about-section__path" aria-label="Aspectos da trajetória">
+        <RevealOnView
+          as="ol"
+          className="about-section__path"
+          ariaLabel="Aspectos da trajetória"
+        >
           {profile.paths.map((item, index) => (
             <li className="about-section__path-item" key={item.title}>
               <span className="about-section__path-number" aria-hidden="true">
@@ -35,7 +40,7 @@ export function AboutSection() {
               </div>
             </li>
           ))}
-        </ol>
+        </RevealOnView>
       </Container>
     </section>
   );

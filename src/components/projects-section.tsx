@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { site } from "@/content/site";
+import { technologyBadgeStyle } from "@/content/technology-colors";
 import type { PortfolioProject } from "@/lib/github";
 
 function ProjectCard({ project }: { project: PortfolioProject }) {
@@ -32,7 +33,13 @@ function ProjectCard({ project }: { project: PortfolioProject }) {
             aria-label="Tecnologias"
           >
             {project.technologies.map((technology) => (
-              <li key={technology}>{technology}</li>
+              <li
+                className="technology-badge"
+                key={technology}
+                style={technologyBadgeStyle(technology)}
+              >
+                {technology}
+              </li>
             ))}
           </ul>
         )}
@@ -76,7 +83,7 @@ export function ProjectsSection({
       <Container>
         <SectionHeading
           id="projects-title"
-          eyebrow="04 / PROJETOS"
+          eyebrow="PROJETOS"
           title="Ideias que viraram"
           accent="código."
           description="Uma seleção de repositórios públicos. Descrições e tecnologias são obtidas do GitHub quando disponíveis."
@@ -87,7 +94,7 @@ export function ProjectsSection({
           ))}
         </ul>
         <a
-          className="projects-section__all-link"
+          className="projects-section__all-link animated-underline"
           href={site.githubUrl}
           target="_blank"
           rel="noopener noreferrer"
