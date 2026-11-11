@@ -4,7 +4,7 @@ export const site = {
   initials: "LR",
   area: "Desenvolvimento de software",
   headline: {
-    first: "Analise, projeção",
+    first: "Análise, projeção",
     second: "e criação de",
     accent: "soluções.",
   },
